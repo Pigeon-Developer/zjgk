@@ -8,7 +8,38 @@ CREATE TABLE IF NOT EXISTS `compileinfo` (
   PRIMARY KEY (`solution_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
+ CREATE TABLE `zj2024pt1` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `school_num` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `school_name` varchar(19) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `special_code` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `special_name` varchar(33) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `plan23` int DEFAULT NULL,
+  `plan` bigint DEFAULT NULL,
+  `baseline23` int DEFAULT NULL,
+  `baseline` bigint DEFAULT NULL,
+  `rank23` int DEFAULT NULL,
+  `rank` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `Index_2` (`school_num`,`special_code`)
+) ENGINE=MyISAM AUTO_INCREMENT=17242 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin 
 
+ CREATE TABLE `zj2024pt2` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `school_num` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `school_name` varchar(19) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `special_code` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `special_name` varchar(33) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `plan23` int DEFAULT NULL,
+  `plan` bigint DEFAULT NULL,
+  `baseline23` int DEFAULT NULL,
+  `baseline` bigint DEFAULT NULL,
+  `rank23` int DEFAULT NULL,
+  `rank` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `Index_2` (`school_num`,`special_code`)
+) ENGINE=MyISAM AUTO_INCREMENT=17242 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin 
+	 
 CREATE TABLE IF NOT EXISTS `contest` (
   `contest_id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) DEFAULT NULL,
